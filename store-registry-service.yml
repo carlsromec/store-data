@@ -1,0 +1,17 @@
+# ===============================
+# PORT
+# ===============================
+server:
+  port: 8020
+
+# ===============================
+# eureka
+# ===============================
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
